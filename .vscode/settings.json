@@ -1,0 +1,19 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    // "configurations": [
+    //     {
+    //         "type": "java",
+    //         "name": "Launch Current File",
+    //         "request": "launch",
+    //         "mainClass": "${file}"
+    //     },
+    //     {
+    //         "type": "java",
+    //         "name": "Launch SendNotification",
+    //         "request": "launch",
+    //         "mainClass": "com.notifyReservation.SendNotification",
+    //         "projectName": "NOTIFYRESERVATION",
+    //         "args": "01/01/2021 12/01/2021 5"
+    //     }
+    // ]
+}
