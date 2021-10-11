@@ -9,6 +9,7 @@ public class SendNotification {
 
     public static void sendMail(Notification notification) {
 
+        // Generamos String que imprimimos por consola para simular Mail
         String mailNotification = "=========== MAIL =========== \n" + 
             "Reservation Identification: " + notification.getReservationIdentification() +"\n" +
             "Name Hotel: " + notification.getNameHotel() +"\n" +
@@ -24,6 +25,7 @@ public class SendNotification {
 
     public static void sendFax(Notification notification) {
 
+        // Generamos String que imprimimos por consola para simular Fax
         String faxNotification = "=========== FAX =========== \n" + 
             "Reservation Identification: " + notification.getReservationIdentification() +"\n" +
             "Name Hotel: " + notification.getNameHotel() +"\n" +

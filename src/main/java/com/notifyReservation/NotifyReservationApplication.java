@@ -21,11 +21,14 @@ public class NotifyReservationApplication {
 
 		if (args.length == 3) {
 			
+			// Se inicializan datos
 			Date d1 = new SimpleDateFormat("dd/MM/yyyy").parse(args[0]);
 			Date d2 = new SimpleDateFormat("dd/MM/yyyy").parse(args[1]);
 			int numNotifications = Integer.parseInt(args[2]);
 
+			// Comprobamos que la fecha inicial es inferior. 
 			if ((d1.compareTo(d2) < 0) && (numNotifications > 0)){
+				// Se genera instancias de tipo Notification de forma random
 				for (int i = 0; i < numNotifications; i++) {
 					Date reservationDate = new Date(ThreadLocalRandom.current().nextLong(d1.getTime(), d2.getTime()));
 					Date checkInDate = new Date(
@@ -38,8 +41,10 @@ public class NotifyReservationApplication {
 					notifications.add(notificacion);
 				}
 	
+				// Ordenamos la lista de notificaciones
 				Collections.sort(notifications);
 	
+				// Ejecutamos la función send donde se envía email a cliente y fax hotel
 				for (Notification notification : notifications) {
 					System.out.println(" ");
 					SendNotification.send(notification);
